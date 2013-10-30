@@ -92,6 +92,7 @@
     ENSURE_SINGLE_ARG(token, NSString);
     NSLog(@"[INFO] TestFlight takeOff (%@)", token);   
     
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     [TestFlight takeOff:token];
 }
 
